@@ -8,6 +8,8 @@ from PyQt5.QtGui import QPainter, QColor
 from PyQt5 import uic
 
 
+OBBLOBLES = 10
+
 class Example(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -27,10 +29,11 @@ class Example(QMainWindow):
         self.repaint()
 
     def draw_obbloble(self, qp):
-        qp.setPen(QColor('yellow'))
+        qp.setPen(QColor('black'))
         qp.setBrush(QColor('yellow'))
-        diameter = randint(1, 240)
-        qp.drawEllipse(QPoint(250, 200), diameter, diameter)
+        for i in range(OBBLOBLES):
+            diameter = randint(1, 100)
+            qp.drawEllipse(QPoint(randint(0, 500), randint(0, 350)), diameter, diameter)
 
 
 if __name__ == '__main__':
