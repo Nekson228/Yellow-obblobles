@@ -7,8 +7,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5 import uic
 
-
 OBBLOBLES = 10
+
 
 class Example(QMainWindow):
     def __init__(self):
